@@ -32,7 +32,7 @@
 
     <!-- Day View -->
     <picker-day
-      v-if="allowedToShowView('day')"
+      v-if="allowedToShowView('day') && isOpen"
       :pageDate="pageDate"
       :selectedDate="selectedDate"
       :showDayView="showDayView"
@@ -57,7 +57,7 @@
 
     <!-- Month View -->
     <picker-month
-      v-if="allowedToShowView('month')"
+      v-if="allowedToShowView('month') && isOpen"
       :pageDate="pageDate"
       :selectedDate="selectedDate"
       :showMonthView="showMonthView"
@@ -76,7 +76,7 @@
 
     <!-- Year View -->
     <picker-year
-      v-if="allowedToShowView('year')"
+      v-if="allowedToShowView('year') && isOpen"
       :pageDate="pageDate"
       :selectedDate="selectedDate"
       :showYearView="showYearView"
